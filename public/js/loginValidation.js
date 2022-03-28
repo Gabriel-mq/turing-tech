@@ -1,4 +1,3 @@
-console.log("probando");  
 const formulario = document.getElementById("formulario-login");
 const inputs = document.querySelectorAll("#formulario-login input")
 
@@ -34,7 +33,6 @@ const validarFormulario = (e) => {
                 document.getElementById("userMail").classList.add("borde_incorrecto_activo")
                 document.getElementById("userMail").classList.remove("borde_correcto_activo")
              errores.push("1")
-            console.log(errores);
                 
             }
         break;

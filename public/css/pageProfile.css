@@ -94,3 +94,51 @@
   text-align: center;
   background-color: var(--negro-intenso-transparente);
 }
+
+/*móvil*/
+@media screen and (min-width:320px) and (max-width:767px) {
+  .container__pageProfile{
+    width: 100%;
+    padding: 0;
+  }
+
+  .main__pageProfile{
+    padding:1rem;
+  }
+  
+  .data__container{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin:0;
+  }
+  
+  .data__title{
+    margin-top:1rem;
+  }
+  
+  .data__form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin:0;
+  }
+
+  .image__container{
+    width: 100%;
+  }
+  
+  .data__form *:not(.image__container) {
+    font-size: 2rem;
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+
+  .data__button-container{
+    width: 100%;
+    margin-top:2rem;
+    margin-left:0;
+  }
+
+}

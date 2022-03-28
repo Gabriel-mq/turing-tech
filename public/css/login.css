@@ -22,6 +22,10 @@
   border-radius: 10px;
 }
 
+.login__h1{
+  text-align: center;
+}
+
 .contenedor-facebook-google {
   background-color: var(--rojo-fuego);
   height: 200px;
@@ -235,4 +239,21 @@
 /*móvil*/
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .contenedorlogin {
+    padding: 2rem;
+  }
+
+  .contenedor-facebook-google{
+    width: 100%;
+  }
+
+  .contenedor-sesion{
+    width: 100%;
+  }
+
+  #userEmail{
+    font-size:5rem;
+  }
+
 }

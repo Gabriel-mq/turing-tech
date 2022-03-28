@@ -79,10 +79,11 @@
     justify-content: center;
     align-items: center;
     height:7vh;
+    width: 100%;
 }
 
 .nav__li{
-    margin: 0 5%;
+    margin: 0 2.5%;
 }
 
 .nav__a{
@@ -134,6 +135,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    z-index: 5;
 }
 
 .header__profile-opts-show{
@@ -196,20 +198,28 @@
         width:2.5rem;
     }
     .header__container-user-car{
-        width: 6rem;
+        width: 9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #header__user{
-        width:2.5rem;
+        width:3rem;
     }
     #header__car{
-        width:2.5rem;
+        width:3rem;
     }
     .nav__a{
-        font-size:1.1rem;
+        font-size:1.5rem;
         text-align: center;
     }
     .nav__ul{
-        display:none;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+    .nav-active{
+        height: 7vh;
     }
     /*Todos los "a"*/
     a{

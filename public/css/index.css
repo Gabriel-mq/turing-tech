@@ -5,6 +5,11 @@
     display: flex;
 }
 
+.main__index{
+    height: 100%;
+    margin: 0 0 5rem 0;
+}
+
 #container-slider{
     margin: auto;
     max-width: 800px;
@@ -137,6 +142,10 @@
 
 @media screen and (min-width:320px) and (max-width:767px) {
 
+    .main__index{
+        height: 100%;
+    }
+
     #container-slider > ul.slider{
         width: 100%;
         height: 9rem;
@@ -159,7 +168,7 @@
     }
     
     .products{
-        height: 25rem;
+        height: 45rem;
     }
 
 }

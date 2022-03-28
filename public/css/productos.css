@@ -195,13 +195,23 @@
     }
 
     .cont-menu{
-        display: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cont-enlace{
+        width: 11.5rem;
     }
 
     .destacados{
         width: 85%;
         display: flex;
         align-items: center;
+    }
+
+    .orden-productos{
+        font-size: 2rem;
+        margin-left:1rem;
     }
 
     .product1, .product2, .product3, .product4, .product5{

@@ -1,4 +1,3 @@
-console.log("probando");  
 const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input")
 
@@ -33,7 +32,6 @@ switch (e.target.name){
 			document.getElementById("registroNombre").classList.add("borde_incorrecto_activo")
 			document.getElementById("registroNombre").classList.remove("borde_correcto_activo")
 		 errores.push("1")
-		console.log(errores);
 			
 		}
 	break;
@@ -55,7 +53,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroEmail":
-		console.log("funciona")
 		if (expresiones.correo.test(e.target.value)) {
 				
 			document.getElementById("p_error3").classList.remove("error_activo")
@@ -72,7 +69,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroDni":
-		console.log("funciona")
 		if (expresiones.dni.test(e.target.value)) {
 				
 			document.getElementById("p_error4").classList.remove("error_activo")
@@ -89,7 +85,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroTel":
-		console.log("funciona")
 		if (expresiones.telefono.test(e.target.value)) {
 				
 			document.getElementById("p_error5").classList.remove("error_activo")
@@ -106,7 +101,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroDir":
-		console.log("funciona")
 		if (expresiones.nombre.test(e.target.value)) {
 				
 			document.getElementById("p_error6").classList.remove("error_activo")
@@ -123,7 +117,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroDepto":
-		console.log("funciona")
 		if (expresiones.nombre.test(e.target.value)) {
 				
 			document.getElementById("p_error7").classList.remove("error_activo")
@@ -140,7 +133,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroPostal":
-		console.log("funciona")
 		if (expresiones.zipcode.test(e.target.value)) {
 				
 			document.getElementById("p_error8").classList.remove("error_activo")
@@ -157,7 +149,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroLock":
-		console.log("funciona")
 		if (expresiones.password.test(e.target.value)) {
 				
 			document.getElementById("p_error9").classList.remove("error_activo")
@@ -174,7 +165,6 @@ switch (e.target.name){
 		}
 	break;
 	case "registroLockRepeat":
-		console.log("funciona")
 		if (expresiones.password.test(e.target.value)) {
 				
 			document.getElementById("p_error10").classList.remove("error_activo")
