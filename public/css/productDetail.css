@@ -1,0 +1,408 @@
+.main-productDetail{
+    padding:5rem;
+}
+
+.main__product-container{
+    background-color: var(--rojo-fuego);
+    margin:0 auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:5rem 8rem 8rem 8rem;
+    border:3px solid var(--negro-intenso);
+    color:var(--blanco-agua);
+}
+
+.main__product-imgs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width:40%;
+}
+
+#main__product-imgs-watch{
+    width:100%;
+    filter:drop-shadow(0 0 9px var(--violeta-fuego));
+}
+
+.main__product-imgs-title{
+    background-color: var(--negro-intenso-transparente);
+    height: 100%;
+    width: 100%;
+    padding:1.5rem;
+    max-height: 40rem;
+    max-width: 45rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__product-imgs{
+    background-color: var(--negro-intenso-transparente);
+    display: flex;
+    justify-content: space-evenly;
+    width:42rem;
+    padding: 1rem;
+    margin:3rem 0;
+    border-radius: 5px;
+    border:1px solid var(--negro-intenso);
+}
+
+.main__product-imgs-ryzen{
+    width:10rem;
+    height: 10rem;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.main__product-imgs-ryzen:hover{
+    filter:drop-shadow(0 0 9px var(--azul-viento));
+}
+
+.main__product-imgs-ryzen:nth-child(1){
+    filter:drop-shadow(0 0 9px var(--violeta-fuego));
+}
+
+.main__product-info-container{
+    width:50%;
+}
+
+.main__product-info-head{
+    border-bottom: 1px solid var(--violeta-fuego);
+    margin:0 0 2rem 0;
+}
+
+.main__product-head-title{
+    font-size: 3.5rem;
+}
+
+.main__product-head-subtitle{
+    display: inline-flex;
+    font-size: 2rem;
+    margin:2rem 0;
+}
+
+.main__product-info-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:2rem 0;
+    border-bottom: 1px solid var(--violeta-fuego);
+}
+
+.main__product-price *{
+    color:var(--blanco-agua);
+}
+
+.main__product-price-title{
+    font-size: 3.5rem;
+}
+
+.main__product-price-subtitle{
+    font-size: 2.5rem;
+}
+
+.main__product-fees *{
+    color:var(--blanco-agua);
+}
+
+.main__product-fees-p{
+    font-size: 2.5rem;
+}
+
+.main__product-fees-title{
+    font-size:3.5rem;
+}
+
+.main__product-fees-subtitle{
+    font-size:2.5rem;
+    margin:0 0 2rem 0;
+}
+
+.main__product-info-footer div{
+    display: flex;
+    align-items: center;
+    margin:2rem 0;
+}
+
+.main__product-info-footer div img{
+    width:4rem;
+    margin:0 2rem 0 0;
+    filter:drop-shadow(0 0 9px var(--rojo-fuego));
+}
+
+.main__product-info-footer div p{
+    font-size:2rem;
+    color:var(--blanco-agua);
+}
+
+.main__product-add-button{
+    background-color: var(--negro-intenso-transparente);
+    width:25rem;
+    height: 8rem;
+    font-size: 2.6rem;
+    color:var(--blanco-agua);
+    margin:3rem 0 0 0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: text-shadow 0.3s ease;
+}
+
+#main__product-add-icon{
+    margin:0 0 0 3rem;
+    width:7rem;
+}
+
+.main__product-add-button:hover{
+    color:var(--blanco-agua);
+    text-shadow: 0 0 2px var(--violeta-fuego),
+                0 0 5px var(--violeta-fuego);
+}
+
+.main__product-edit-button{
+    background-color: var(--negro-intenso-transparente);
+    width:25rem;
+    height: 8rem;
+    font-size: 2.6rem;
+    color:var(--blanco-agua);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: text-shadow 0.3s ease;
+}
+
+#main__product-edit-icon{
+    margin:0 0 0 3rem;
+    width:7rem;
+}
+
+.main__product-edit-button:hover{
+    color:var(--blanco-agua);
+    text-shadow: 0 0 2px var(--violeta-fuego),
+                0 0 5px var(--violeta-fuego);
+}
+
+.main__product-delete-button{
+    background-color: var(--negro-intenso-transparente);
+    width:25rem;
+    height: 8rem;
+    font-size: 2.6rem;
+    color:var(--blanco-agua);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: text-shadow 0.3s ease;
+}
+
+#main__product-delete-icon{
+    margin:0 0 0 3rem;
+    width:7rem;
+}
+
+.main__product-delete-button:hover{
+    color:var(--blanco-agua);
+    text-shadow: 0 0 2px var(--violeta-fuego),
+                0 0 5px var(--violeta-fuego);
+}
+
+.main__product-specs-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:5rem 0;
+}
+
+.main__product-specs-title{
+    font-size:2.5rem;
+    text-decoration: underline var(--azul-viento);
+    text-underline-offset: 0.5rem;
+    width: 100%;
+    margin:0 0 3rem 0;
+}
+
+.main__product-specs-characts-title{
+    font-size: 2rem;
+    color:var(--blanco-agua);
+    text-decoration: underline var(--azul-viento);
+    text-underline-offset: 0.2rem;
+    margin:0 0 2rem 0;
+}
+
+.main__product-specs-characts-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.main__product-specs-characts-info span{
+    font-size: 1.5rem;
+    color:var(--violeta-fuego);
+    text-shadow: 0 0 9px var(--negro-intenso);
+}
+
+.main__product-specs-coolers-title{
+    font-size: 2rem;
+    color:var(--blanco-agua);
+    text-decoration: underline var(--azul-viento);
+    text-underline-offset: 0.2rem;
+    margin:0 0 2rem 0;
+}
+
+.main__product-specs-coolers-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.main__product-specs-coolers-info span{
+    font-size: 1.5rem;
+    color:var(--violeta-fuego);
+    text-shadow: 0 0 9px var(--negro-intenso);
+}
+
+.main__product-specs-memory-title{
+    font-size: 2rem;
+    color:var(--blanco-agua);
+    text-decoration: underline var(--azul-viento);
+    text-underline-offset: 0.2rem;
+    margin:0 0 2rem 0;
+}
+
+.main__product-specs-memory-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.main__product-specs-memory-info span{
+    font-size: 1.5rem;
+    color:var(--violeta-fuego);
+    text-shadow: 0 0 9px var(--negro-intenso);
+}
+
+/*Tablet - netbook*/
+
+@media screen and (min-width:768px) and (max-width:1150px){
+    .main__product-container{
+        padding:5rem 3rem;
+    }
+    .main__product-imgs-container{
+        width: 50%;
+        justify-content: flex-start;
+    }
+    #main__product-imgs-watch{
+        width: 100%;
+    }
+    .main__product-imgs{
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    .main__product-info-container{
+        width: 45%;
+    }
+    .main__product-head-title{
+        font-size: 3rem;
+    }
+    .main__product-info-body *{
+        text-align: center;
+    }
+    .main__product-price-title{
+        font-size:2.5rem;
+    }
+    .main__product-price-subtitle{
+        font-size: 1.5rem;
+    }
+    .main__product-fees-p{
+        font-size: 1.5rem;
+    }
+    .main__product-fees-title{
+        font-size: 2.5rem;
+    }
+    .main__product-fees-subtitle{
+        font-size: 1.5rem;
+    }
+    .main__product-specs-container > *:not(h2){
+        margin: 1.5rem 0 0 0;
+    }
+}
+
+/*móvil*/
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .main-productDetail{
+        padding: 1.5rem;
+    }
+    .main__product-container{
+        padding:0 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .main__product-imgs-container{
+        width: 100%;
+        margin:0;
+        padding:2rem;
+    }
+    #main__product-imgs-watch{
+        width: 100%;
+    }
+    .main__product-imgs-title{
+        font-size: 1.5rem;
+    }
+    .main__product-imgs{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .main__product-info-container{
+        width: 100%;
+    }
+    .main__product-head-title{
+        font-size: 2.5rem;
+    }
+    .main__product-head-subtitle{
+        font-size: 1.5rem;
+    }
+    .main__product-price-title{
+        font-size:2.5rem;
+    }
+    .main__product-price-subtitle{
+        font-size: 1.5rem;
+    }
+    .main__product-fees-p{
+        font-size: 1.5rem;
+    }
+    .main__product-fees-title{
+        font-size: 2.5rem;
+    }
+    .main__product-fees-subtitle{
+        font-size: 1.5rem;
+    }
+    .main__product-add-container{
+        width: 100%;
+    }
+    .main__product-add-button{
+        width: 100%;
+        margin:3rem 0 0 0;
+    }
+    .main__product-edit-container{
+        width: 100%;
+    }
+    .main__product-edit-button{
+        width: 100%;
+        margin:3rem 0 0 0;
+    }
+    .main__product-delete-container{
+        width: 100%;
+    }
+    .main__product-delete-button{
+        width: 100%;
+        margin:3rem 0 0 0;
+    }
+    .main__product-specs-container{
+        margin: 3rem 0;
+    }
+    .main__product-specs-container > *:not(h2){
+        margin: 1rem 0;
+        width: 100%;
+    }
+}

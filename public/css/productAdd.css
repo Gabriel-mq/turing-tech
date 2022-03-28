@@ -1,0 +1,399 @@
+.main-addProduct {
+  padding: 5rem;
+}
+
+.main-addProduct-container {
+  background-color: var(--rojo-fuego);
+  margin: 0 auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  border: 3px solid var(--negro-intenso);
+}
+
+.main__title-addProduct {
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 3rem 0;
+  color: var(--blanco-agua);
+  text-decoration: 2px underline var(--negro-intenso-transparente);
+  text-underline-offset: 0.5rem;
+}
+
+.main-addProduct form {
+  padding: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__bluebox {
+  background-color: var(--negro-intenso);
+  width: 5rem;
+  height: 4rem;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  z-index: -5;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__bluebox img {
+  width: 5rem;
+  filter: invert(100%) sepia(42%) saturate(3179%) hue-rotate(178deg)
+    brightness(102%) contrast(94%);
+}
+
+.main__register {
+  background-color: var(--negro-intenso-transparente);
+  display: flex;
+  border-radius: 2px;
+  border: 1px solid var(--negro-intenso);
+  width: 100%;
+  height: 4rem;
+  margin-left: 4.6rem;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.main__register * {
+  background-color: rgba(255, 0, 0, 0.027);
+  border-left: 0.1px solid var(--negro-intenso);
+  font-size: 2rem;
+  color: var(--blanco-agua);
+  padding: 1rem;
+  width: 100%;
+}
+
+.main__register-avatar {
+  font-size: 1.5rem;
+}
+
+.main__container-surname {
+  width: 40%;
+}
+
+#productVisibility {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productVisibility option {
+  background-color: var(--negro-intenso-transparente);
+}
+
+#productImportant {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productImportant option {
+  background-color: var(--negro-intenso-transparente);
+}
+
+#productCategory {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productCategory option {
+  background-color: var(--negro-intenso-transparente);
+}
+
+#productBrand {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productBrand option {
+  background-color: var(--negro-intenso-transparente);
+}
+
+#productDiscount {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productDiscount option {
+  background-color: var(--negro-intenso-transparente);
+}
+
+#create-submit {
+  background-color: var(--negro-intenso-transparente);
+  border: 2px solid var(--negro-intenso);
+  border-radius: 5px;
+  width: 30rem;
+  height: 8rem;
+  font-size: 4rem;
+  margin: 2rem auto;
+  color: var(--blanco-agua);
+}
+
+#create-submit:hover {
+  cursor: pointer;
+  color: var(--violeta-fuego);
+}
+
+/* Validaciones */
+
+.productCategory::after,
+.productBrand::after,
+.productName::after,
+.productDescription::after,
+.productDescriptionLong::after,
+.productPrice::after,
+.productStock::after,
+.productFees::after,
+.productDiscount::after,
+.imageProduct::after,
+.productVisibility::after,
+.productImportant::after {
+  width: 110%;
+  display: block;
+  margin: 1rem 0 0 0;
+  font-size: calc(0.1rem + 1vw);
+  color: var(--blanco-agua);
+}
+
+.productCategory::after {
+  content: "La categoría no puede estar vacía";
+}
+
+.productBrand::after {
+  content: "La marca no puede estar vacía";
+}
+
+.productName::after {
+  content: "El nombre debe contener una longitud mínima de 5 caractéres y máxima de 20. No puede estar vacío";
+}
+
+.productDescription::after {
+  content: "La descripción debe contener una longitud mínima de 5 caractéres y máxima de 20. No puede estar vacía";
+}
+
+.productDescriptionLong::after {
+  content: "La descripción ampliada debe contener una longitud mínima de 5 caractéres y máxima de 40. No puede estar vacía.";
+}
+
+.productPrice::after {
+  content: "El precio solo puede contener números y no puede estar vacío.";
+}
+
+.productStock::after {
+  content: "El stock debe contener solo números, en caso de no haber, colocar número 0.";
+}
+
+.productFees::after {
+  content: "El descuento no puede estar vacío, en caso de no tener, colocar númer 0.";
+}
+
+.productDiscount::after {
+  content: "El descuento no puede estar vacío";
+}
+
+.imageProduct::after {
+  content: "La imágen respectiva del producto, es obligatoria";
+}
+
+.productVisibility::after {
+  content: "La visibilidad no puede estar vacía";
+}
+
+.productImportant::after {
+  content: "El elemento destacado no puede estar vacío";
+}
+ 
+
+/*móvil*/
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .main-registerUsers {
+    padding: 2rem;
+  }
+
+  .main__register-container {
+    background-color: var(--rojo-fuego);
+    margin: 0 auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem 0 2rem;
+    border: 3px solid var(--negro-intenso);
+  }
+
+  .main__title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 3rem 0;
+    color: var(--blanco-agua);
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: -2rem;
+  }
+
+  .main-registerUsers form {
+    padding: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__container-name,
+  .main__container-surname,
+  .main__container-user,
+  .main__container-email,
+  .main__container-lock,
+  .main__container-lockRepeat,
+  .main__container-avatar,
+  .main__container-rol {
+    z-index: 10;
+    width: 100%;
+    position: relative;
+  }
+
+  .main__container-name,
+  .main__container-surname,
+  .main__container-user,
+  .main__container-email,
+  .main__container-lock,
+  .main__container-lockRepeat,
+  .main__container-avatar,
+  .main__container-rol {
+    margin: 0 0 2rem 0;
+  }
+
+  .nombre::after,
+  .apellido::after,
+  .usuario::after,
+  .email::after,
+  .contrasenia::after,
+  .contraseniarepeat::after,
+  .avatar::after,
+  .rol::after {
+    width: 110%;
+    display: block;
+    margin: 1rem 0 0 0;
+    font-size: calc(0.6rem + 1vw);
+    color: var(--blanco-agua);
+  }
+
+  .main__bluebox {
+    background-color: var(--negro-intenso);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    z-index: -5;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -2.5rem;
+  }
+
+  .main__bluebox img {
+    width: 5rem;
+    filter: invert(100%) sepia(42%) saturate(3179%) hue-rotate(178deg)
+      brightness(102%) contrast(94%);
+  }
+
+  .main__register {
+    background-color: var(--negro-intenso-transparente);
+    display: flex;
+    border-radius: 2px;
+    border: 1px solid var(--negro-intenso);
+    width: 100%;
+    height: 3rem;
+    margin-left: 2.1rem;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .main__register * {
+    background-color: rgba(255, 0, 0, 0.027);
+    border-left: 0.1px solid var(--negro-intenso);
+    font-size: 1.5rem;
+    color: var(--blanco-agua);
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .main__register-avatar {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #registroRol {
+    padding: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+  }
+
+  #registroRol option {
+    background-color: var(--negro-intenso-transparente);
+  }
+
+  #main__register-submit {
+    background-color: var(--negro-intenso-transparente);
+    border: 2px solid var(--negro-intenso);
+    border-radius: 5px;
+    width: 15rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin: 2rem auto;
+    color: var(--blanco-agua);
+  }
+
+  #main__register-submit:hover {
+    cursor: pointer;
+    color: var(--violeta-fuego);
+  }
+}
+
+.formulario__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #fff;
+  background-color: red;
+  opacity: 1;
+  display: none;
+}
+
+.formulario__input-error-activo {
+  display: block;
+}
+
+.formulario__mensaje-exito {
+  font-size: 15px;
+  background-color: #119200;
+  display: none;
+}
+
+.formulario__mensaje-exito-activo {
+  display: block;
+}
+
+.formulario__mensaje {
+  height: 35px;
+  line-height: 35px;
+  background: #f32727;
+  width: 50%;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.formulario__mensaje-activo {
+  display: block;
+}
+
+.formulario__mensaje b {
+  font-size: 20px;
+}

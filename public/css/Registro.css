@@ -1,0 +1,363 @@
+/*Tablet - netbook*/
+    .main-registerUsers{
+        padding:5rem;
+    }
+    
+    .main__register-container{
+        background-color: var(--rojo-fuego);
+        margin:0 auto;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border:3px solid var(--negro-intenso);
+    }
+    
+    .main__title{
+        font-size: 2rem;
+        font-weight:normal;
+        padding:3rem 0;
+        color:var(--blanco-agua);
+        text-decoration: 2px underline var(--negro-intenso-transparente);
+        text-underline-offset: 0.5rem;
+    }
+    
+    .main-registerUsers form{
+        padding:2.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .main__container-name,.main__container-user,.main__container-email,.main__container-dni,.main__container-tel,.main__container-dir,.main__container-depto,.main__container-postal,.main__container-locality,.main__container-province,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
+        z-index: 10;
+        width:40%;
+        position: relative;
+    }
+    
+    .main__container-name,.main__container-user,.main__container-email,.main__container-dni,.main__container-tel,.main__container-dir,.main__container-depto,.main__container-postal,.main__container-locality,.main__container-province,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
+        margin:0 0 3rem 0;
+    }
+    
+    .nombre::after,.usuario::after, .email::after,.dni::after,.tel::after,.dir::after,.depto::after,.postal::after,.locality::after,.province::after, .contrasenia::after, .contraseniarepeat::after,.avatar::after,.rol::after,.registroavatar::after{
+        width: 110%;
+        display: block;
+        margin: 1rem 0 0 0;
+        font-size: calc(0.1rem + 1vw);
+        color:var(--blanco-agua);
+    }
+    
+
+    .formulario__validacion-estado {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        z-index: 100;
+        font-size: 16px;
+        opacity: 0;
+    }
+
+    .parrafo_error{
+        display: none;
+        font-size: 12px;
+        margin: 5px;
+        font-weight: 800;
+        text-align: center;
+    }
+    .error_activo{
+        display: block;
+    }
+
+    .borde_correcto_activo{
+        border: 2px solid green;
+    }
+
+    .borde_incorrecto_activo{
+        border: 2px solid red;
+    }
+    
+
+    
+    .nombre::after{
+        content: "El nombre y apellido no puede contener números ni caracteres que no sean letras. Ni contener el campo vacío";
+    }
+    .nombre{
+        content: "El nombre y apellido no puede contener números ni caracteres que no sean letras. Ni contener el campo vacío";
+    }
+    
+    .usuario::after{
+        content: "Su nombre de usuario solamente puede contener caracteres alfanuméricos. Ni contener el campo vacío, con una longitud máxima de 20 caracteres";
+    }
+    
+    .email::after{
+        content: "Su email solamente puede contener caracteres alfanuméricos, guiones medio, guiones bajos y un @ como intermediario. Ni contener el campo vacío";
+    }
+    
+    .dni::after{
+        content: "Su DNI debe contener obligatoriamente una longitud de 8 números y sin ningún otro tipo de caracter";
+    }
+    
+    .tel::after{
+        content: "Su número de teléfono debe contener una longitud de 10 números, no se aceptan números extranjeros";
+    }
+    
+    .dir::after{
+        content: "Su dirección fiscal debe contener solamente caracteres alfanuméricos";
+    }
+    
+    .postal::after{
+        content: "Su código postal debe contener solamente caracteres alfanuméricos";
+    }
+    
+    .depto::after{
+        content: "Su departamento/piso debe contener solamente caracteres alfanuméricos";
+    }
+    
+    .locality::after{
+        content: "Su localidad solamente puede contener letras, sin ningún otro tipo de caracter, con una longitud máxima de 30 caracteres";
+    }
+    
+    .province::after{
+        content: "Su provincia solamente puede contener letras, sin ningún otro tipo de caracter,con una longitud máxima de 30 caracteres";
+    }
+    
+    .contrasenia::after{
+        content: "Su contraseña obligatoriamente no puede estar vacía y debe tener una longitud mínima de 8 caractéres.";
+    }
+    
+    .contraseniarepeat::after{
+        content: "La contraseña de confirmación ingresada no coincide o es inexistente.";
+    }
+
+    .registroavatar::after{
+        content: "El tipo de archivo que intenta subir no es válido o pesa más de 5 MBs.";
+    }
+    
+    .main__bluebox{
+        background-color: var(--negro-intenso);
+        width:5rem;
+        height: 4rem;
+        border-radius: 10px 0 0 10px;
+        position: absolute;
+        z-index: -5;
+        padding:1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .main__bluebox img{
+        width: 5rem;
+        height: 2rem;
+        filter:invert(100%) sepia(42%) saturate(3179%) hue-rotate(178deg) brightness(102%) contrast(94%);
+    }
+    
+    .main__register{
+        background-color: var(--negro-intenso-transparente);
+        display: flex;
+        border-radius: 2px;
+        border:1px solid var(--negro-intenso);
+        width: 100%;
+        height: 4rem;
+        /* margin-left:4.6rem; */
+        overflow: hidden;
+        z-index: 10;
+    }
+    
+    .main__register *{
+        background-color: rgba(255, 0, 0, 0.027);
+        border-left:0.1px solid var(--negro-intenso);
+        font-size: 2rem;
+        color:var(--blanco-agua);
+        padding: 1rem;
+        width:100%;
+    }
+
+    .main__register-avatar{
+        font-size:1.5rem;
+    }
+
+    #registroRol{
+        font-size: 1.5rem;
+        background-color: transparent;
+    }
+
+    #registroRol option{
+        background-color: var(--negro-intenso-transparente);
+    }
+
+    #registroProvince{
+        font-size: 1.5rem;
+        background-color: transparent;
+    }
+      
+    #registroProvince option{
+        background-color: var(--negro-intenso-transparente);
+    }
+
+    #registroLocality{
+        font-size: 1.5rem;
+        background-color: transparent;
+      }
+      
+    #registroLocality option{
+        background-color: var(--negro-intenso-transparente);
+    }
+    
+    #main__register-submit{
+        background-color: var(--negro-intenso-transparente);
+        border:2px solid var(--negro-intenso);
+        border-radius: 5px;
+        width:50rem;
+        height: 10rem;
+        font-size: 4rem;
+        margin:2rem auto;
+        transition: text-shadow 0.3s ease;
+        color:var(--blanco-agua);
+    }
+    
+    #main__register-submit:hover{
+        cursor: pointer;
+        color:var(--blanco-agua) !important;
+        text-shadow: 0 0 2px var(--violeta-fuego),
+        0 0 5px var(--violeta-fuego);
+    }
+
+/*móvil*/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .main-registerUsers{
+        padding:2rem;
+    }
+    
+    .main__register-container{
+        background-color: var(--rojo-fuego);
+        margin:0 auto;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding:0 2rem 0 2rem;
+        border:3px solid var(--negro-intenso);
+    }
+    
+    .main__title{
+        font-size: 1.5rem;
+        font-weight:normal;
+        padding:3rem 0;
+        color:var(--blanco-agua);
+        text-align: center;
+        text-decoration: none;
+        margin-bottom:-2rem;
+    }
+    
+    .main-registerUsers form{
+        padding:2.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main__container-name,.main__container-surname,.main__container-user,.main__container-email,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
+        z-index: 10;
+        width:100%;
+        position: relative;
+    }
+    
+    .main__container-name,.main__container-surname,.main__container-user,.main__container-email,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
+        margin:0 0 2rem 0;
+    }
+    
+    .nombre::after,.apellido::after,.usuario::after, .email::after, .contrasenia::after, .contraseniarepeat::after,.avatar::after,.rol::after{
+        width: 110%;
+        display: block;
+        margin: 1rem 0 0 0;
+        font-size: calc(0.6rem + 1vw);
+        color:var(--blanco-agua);
+    }
+    
+    .nombre::after{
+        content: "El nombre no puede contener números ni caracteres que no sean letras.";
+    }
+
+    .apellido::after{
+        content: "El apellido no puede contener números ni caracteres que no sean letras.";
+    }
+    
+    .usuario::after{
+        content: "Su nombre de usuario solamente puede contener caracteres alfanuméricos.";
+    }
+    
+    .email::after{
+        content: "Su email solamente puede contener caracteres alfanuméricos, guiones medio, guiones bajos y un arroba como intermediario.";
+    }
+    
+    .contrasenia::after{
+        content: "Su contraseña obligatoriamente debe contener al menos una letra mayúscula, un número y cualquier tipo de guión.";
+    }
+    
+    .contraseniarepeat::after{
+        content: "La contraseña de confirmación ingresada no coincide.";
+    }
+    
+    .main__bluebox{
+        background-color: var(--negro-intenso);
+        width:5rem;
+        height: 3rem;
+        border-radius: 10px 0 0 10px;
+        position: absolute;
+        z-index: -5;
+        padding:1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        /* margin-left:-2.5rem; */
+    }
+    
+    .main__register{
+        background-color: var(--negro-intenso-transparente);
+        display: flex;
+        border-radius: 2px;
+        border:1px solid var(--negro-intenso);
+        width: 100%;
+        height: 3rem;
+        margin-left:2.1rem;
+        overflow: hidden;
+        z-index: 10;
+    }
+    
+    .main__register *{
+        background-color: rgba(255, 0, 0, 0.027);
+        border-left:0.1px solid var(--negro-intenso);
+        font-size: 1.5rem;
+        color:var(--blanco-agua);
+        padding: 1rem;
+        width:100%;
+    }
+
+    .main__register-avatar{
+        padding:0.5rem;
+        font-size:1rem;
+    }
+
+    #registroRol{
+        padding:0;
+        font-size: 1.5rem;
+        background-color: transparent;
+    }
+
+    #registroRol option{
+        background-color: var(--negro-intenso-transparente);
+    }
+    
+    #main__register-submit{
+        width:15rem;
+        height: 4rem;
+        font-size: 2rem;
+        margin:2rem auto;
+    }
+}

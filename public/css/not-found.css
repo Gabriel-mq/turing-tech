@@ -1,0 +1,77 @@
+.main__error404{
+    padding:5rem;
+}
+
+.main__error404-container{
+    background-color: var(--rojo-fuego);
+    margin:0 auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding:5rem;
+    border:3px solid var(--negro-intenso);
+    color:var(--blanco-agua);
+}
+
+.main__error404-container * {
+    margin:1rem 0;
+}
+
+.main__error404-h1{
+    font-size:6rem
+}
+
+.main__error404-h3{
+    font-size:2rem;
+}
+
+.main__error404-li::before{
+    content:"";
+    display: inline-flex;
+    width:2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background-color: var(--negro-intenso-transparente);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.main__error404-li {
+    transition: text-shadow 0.3s ease;
+}
+
+.main__error404-li a {
+    font-size: 3rem;
+    color:var(--blanco-agua);
+}
+
+.main__error404-li a:hover {
+    text-shadow: 0 0 1px var(--violeta-fuego),
+    0 0 2px var(--violeta-fuego),
+    0 0 3px var(--violeta-fuego),
+    0 0 4px var(--violeta-fuego),
+    0 0 5px var(--violeta-fuego);
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .main__error404{
+        padding:2rem;
+    }
+    
+    .main__error404-container{
+        height: 90vh;
+        padding:2rem;
+    }
+    
+    .main__error404-container * {
+        margin:0.5rem 0;
+    }
+    
+    .main__error404-h1{
+        font-size:3rem
+    }
+    
+    .main__error404-h3{
+        font-size:1.5rem;
+    }
+}

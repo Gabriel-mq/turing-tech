@@ -1,0 +1,336 @@
+.main-addProduct{
+  padding:5rem;
+}
+
+.main-addProduct-container{
+  background-color: var(--rojo-fuego);
+  margin:0 auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom:4rem;
+  border:3px solid var(--negro-intenso);
+}
+
+.main__title-addProduct{
+  font-size: 2rem;
+  font-weight:normal;
+  padding:3rem 0;
+  color:var(--blanco-agua);
+  text-decoration: 2px underline var(--negro-intenso-transparente);
+  text-underline-offset: 0.5rem;
+}
+
+.main-addProduct form{
+  padding:2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+.main__bluebox{
+  background-color: var(--negro-intenso);
+  width:5rem;
+  height: 4rem;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  z-index: -5;
+  padding:1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.main__bluebox img{
+  width: 5rem;
+  filter:invert(100%) sepia(42%) saturate(3179%) hue-rotate(178deg) brightness(102%) contrast(94%);
+}
+
+.main__register{
+  background-color: var(--negro-intenso-transparente);
+  display: flex;
+  border-radius: 2px;
+  border:1px solid var(--negro-intenso);
+  width: 100%;
+  height: 4rem;
+  margin-left:4.6rem;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.main__register *{
+  background-color: rgba(255, 0, 0, 0.027);
+  border-left:0.1px solid var(--negro-intenso);
+  font-size: 2rem;
+  color:var(--blanco-agua);
+  padding: 1rem;
+  width:100%;
+}
+
+.main__register-avatar{
+  font-size:1.5rem;
+}
+
+#productVisibility{
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productVisibility option{
+  background-color: var(--negro-intenso-transparente);
+}
+
+#productImportant{
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productImportant option{
+  background-color: var(--negro-intenso-transparente);
+}
+
+#productCategory{
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productCategory option{
+  background-color: var(--negro-intenso-transparente);
+}
+
+
+#productBrand{
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#productBrand option{
+  background-color: var(--negro-intenso-transparente);
+}
+
+
+#edit-submit{
+  background-color: var(--negro-intenso-transparente);
+  border:2px solid var(--negro-intenso);
+  border-radius: 5px;
+  width:30rem;
+  height: 8rem;
+  font-size: 4rem;
+  margin:2rem auto;
+  color:var(--blanco-agua);
+}
+
+#edit-submit:hover{
+  cursor: pointer;
+  color:var(--violeta-fuego);
+}
+.cursor{
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main__register-1{
+  border: 3px solid transparent;
+  border-radius: 3px;
+  transition: .3s ease all;
+}
+.main__register-1:focus {
+  border: 3px solid #0075ff ;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+.form__input-error{
+  font-size: 1.2rem;
+  display: none;
+  color: #E9A6A6;
+}
+.form__input-error-activo {
+  display: block;
+}
+.validacion{
+  position: absolute;
+  left: 38rem;
+  opacity: 0;
+  z-index: 100;
+}
+.form__mensaje{
+  height: 4rem;
+  background-color:#f66060;
+  display: none;
+}
+.form__mensaje-activo {
+  display: block;
+}
+.form__mensaje{
+  margin: 5rem;
+}
+.enviar-btn {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.form__msj-exito {
+  font-size: 2rem;
+  color: #119200;
+  display: none;
+}
+.form__msj-exito-activo {
+  display: block;
+}
+/* --------- Estilos para Validacion*/
+.main__container-rol-correcto .validacion {
+    color: greenyellow;
+
+}
+.main__container-rol-incorrecto .form__mensaje{
+  color: #f66060;
+}
+
+.main__container-rol-incorrecto .validacion {
+  color: #f66060;
+}
+.main__container-rol-incorrecto .main__register-1{
+  border: 3px solid #f66060;
+}
+
+
+
+
+
+/*móvil*/
+
+@media screen and (min-width:320px) and (max-width:768px) {
+.main-registerUsers{
+  padding:2rem;
+}
+
+.main__register-container{
+  background-color: var(--rojo-fuego);
+  margin:0 auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding:0 2rem 0 2rem;
+  border:3px solid var(--negro-intenso);
+}
+
+.main__title{
+  font-size: 1.5rem;
+  font-weight:normal;
+  padding:3rem 0;
+  color:var(--blanco-agua);
+  text-align: center;
+  text-decoration: none;
+  margin-bottom:-2rem;
+}
+
+.main-registerUsers form{
+  padding:2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__container-name,.main__container-surname,.main__container-user,.main__container-email,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
+  z-index: 10;
+  width:100%;
+  position: relative;
+}
+
+.main__container-name,.main__container-surname,.main__container-user,.main__container-email,.main__container-lock,.main__container-lockRepeat,.main__container-avatar,.main__container-rol{
+  margin:0 0 2rem 0;
+}
+
+.nombre::after,.apellido::after,.usuario::after, .email::after, .contrasenia::after, .contraseniarepeat::after,.avatar::after,.rol::after{
+  width: 110%;
+  display: block;
+  margin: 1rem 0 0 0;
+  font-size: calc(0.6rem + 1vw);
+  color:var(--blanco-agua);
+}
+
+
+.main__bluebox{
+  background-color: var(--negro-intenso);
+  width:5rem;
+  height: 3rem;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  z-index: -5;
+  padding:1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-left:-2.5rem;
+}
+
+.main__bluebox img{
+  width: 5rem;
+  filter:invert(100%) sepia(42%) saturate(3179%) hue-rotate(178deg) brightness(102%) contrast(94%);
+}
+
+.main__register{
+  background-color: var(--negro-intenso-transparente);
+  display: flex;
+  border-radius: 2px;
+  border:1px solid var(--negro-intenso);
+  width: 100%;
+  height: 3rem;
+  margin-left:2.1rem;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.main__register *{
+  background-color: rgba(255, 0, 0, 0.027);
+  border-left:0.1px solid var(--negro-intenso);
+  font-size: 1.5rem;
+  color:var(--blanco-agua);
+  padding: 1rem;
+  width:100%;
+}
+
+.main__register-avatar{
+  padding:0.5rem;
+  font-size:1rem;
+}
+
+#registroRol{
+  padding:0;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#registroRol option{
+  background-color: var(--negro-intenso-transparente);
+}
+
+#main__register-submit{
+  background-color: var(--negro-intenso-transparente);
+  border:2px solid var(--negro-intenso);
+  border-radius: 5px;
+  width:15rem;
+  height: 4rem;
+  font-size: 2rem;
+  margin:2rem auto;
+  color:var(--blanco-agua);
+}
+
+#main__register-submit:hover{
+  color:var(--violeta-fuego);
+  cursor: pointer;
+}
+}
+
+p {
+  color: white;
+  font-size: 15px;
+}

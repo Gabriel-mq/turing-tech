@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD-->
+<%- include("../partials/head.ejs") %>
+    <!-- FIN HEAD-->
+
+
+    <body>
+
+
+        <!-- HEADER + NAVBAR + LOGO -->
+        <%- include("../partials/header.ejs") %>
+            <!-- FIN  HEADER + NAVBAR + LOGO -->
+
+            <main class="main__search-results">
+
+                <section class="main__search-container">
+                    <h2 class="main__search-results-h2">Resultados de búsqueda:</h2>
+                    <div class="main__search-products-container"></div>
+                    <% for(let i=0; i < productsResults.length;i++){ %>
+                        <a href="/productDetail/<%=productsResults[i].id%>">
+                            <article class="main__search-product">
+                                <img src="/images/<%= productsResults[i].sliced %>" class="main__search-image"
+                                    alt="Producto Buscado">
+                                <p>
+                                    <%= productsResults[i].product_name %>
+                                </p>
+                                <p>$<%= productsResults[i].price %>
+                                </p>
+                            </article>
+                        </a>
+                        <% } %>
+                </section>
+            </main>
+
+            <!-- footer-->
+            <%- include("../partials/footer.ejs") %>
+                <!-- fin footer-->
+    </body>
+
+</html>

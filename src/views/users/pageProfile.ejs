@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include("../partials/head.ejs") %>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+  <main class="main__pageProfile">
+      <div class="container__pageProfile">
+        <div class="data__container">
+          <h2 class="data__title">Datos de usuario</h2>
+          <form action="/pageProfile?_method=PUT" method="POST" class="data__form" enctype="multipart/form-data">
+            <div class="image__container">
+              <img src="/images/users-assets/<%= userLogged.imageUser %>" alt="imágen de usuario" class="image__user">
+              <p class="image__change">Actualizar imágen</p>
+              <input type="file" name="imageUser" id="imageUser">
+            </div>
+            <div class="user__container-data">
+              <label for="user_fullname">Nombre completo</label>
+              <input type="text" name="user_fullname" id="user_fullname" placeholder="Nombre completo" value="<%= userLogged.user_fullname %>">
+  
+              <label for="user_nickname">Nombre de usuario</label>
+              <input type="text" name="user_nickname" id="user_nickname" placeholder="Usuario" value="<%= userLogged.user_nickname %>">
+  
+              <label for="user_email">Email</label>
+              <p class="user_email"><%= userLogged.user_email %> </p>
+  
+              <label for="user_dni">DNI</label>
+              <p class="user_dni"><%= userLogged.user_dni %></p>
+  
+              <label for="user_cellphone">Número de celular</label>
+              <input type="number" name="user_cellphone" id="user_cellphone" placeholder="Celular" value="<%= userLogged.user_cellphone %>">
+  
+              <label for="fiscal_adress">Dirección fiscal</label>
+              <input type="text" name="fiscal_adress" id="fiscal_adress" placeholder="Dirección fiscal" value="<%= adress.fiscal_adress %>">
+  
+              <label for="department">Departamento</label>
+              <input type="text" name="department" id="department" placeholder="Departamento" value="<%= adress.department %>">
+  
+              <label for="postal_code">Código postal</label>
+              <input type="number" name="postal_code" id="postal_code" placeholder="Código postal" value="<%= adress.postal_code %>">
+  
+              <label for="user_province">Provincia</label>
+              <select name="user_province" id="user_province">
+                <% for(let i = 0; i < provinces.length;i++) {%> 
+                  <option value="<%= provinces[i].id %>"><%= provinces[i].province %></option>
+                <% } %> 
+              </select>
+  
+              <label for="locality">Localidad</label>
+              <select name="locality" id="locality">
+                <% for(let i = 0; i < localities.length;i++) {%>
+                  <option value="<%= localities[i].id %>" <%= localities[i].id == adress.locality ? "selected" : null %>><%= localities[i].locality %></option>
+                <% } %> 
+              </select>
+            </div>
+
+            <div class="data__button-container">
+              <button type="submit" class="data__submit">Editar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <%-include("../partials/footer.ejs") %>
+</body>
+
+</html>

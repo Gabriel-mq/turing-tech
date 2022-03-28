@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main class="containerproductos">
+      <div class="container">
+        <div class="cont-menu">
+          <a href="/products/Equipos">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Equipos y Notebooks</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Procesadores-coolers">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Procesadores y coolers cpus</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Motherboard">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Mothers y combos</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Memorias RAM">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Memorias Ram</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Placas de video">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Placas de Video y otras</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Fuentes de alimentacion">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Fuentes de Alimentación</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Gabinetes">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Gabinetes</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Perifericos">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Teclados y Mouses</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+
+          <a href="/products/Accesorios">
+            <div class="cont-enlace">
+              <div class="opcion">
+                <p>Accesorios para PC</p>
+                <!-- <p class="icono"> + </p> -->
+              </div>
+              <div class="enlace">
+                <a href="#">Enlace-1</a>
+                <a href="#">Enlace-2</a>
+                <a href="#">Enlace-3</a>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <% if(locals.userLogged && locals.userLogged.administrator === true){ %> 
+          <a href="/productAdd">
+            <button type="submit" id="createProduct-submit">
+              Agregar Producto
+            </button>
+          </a>
+        <% } %> 
+
+        <div class="destacados">
+          <div class="destacadosorden">
+            <span class="orden-productos">Ordenar por</span>
+            <select name="ordenado" id="ordenado">
+              <option value="amazing">Destacado</option>
+              <option value="highprice">Mayor precio</option>
+              <option value="lowprice">Menor precio</option>
+            </select>
+          </div>
+
+          <% productsFiltered.forEach(product=> { %>
+          <div class="product1">
+            <div class="imagen">
+              <a href="/productDetail/<%=product.id%>"
+                ><img
+                  src="/images/<%=product.sliced%>"
+                  alt="<%= product.imageProduct %> "
+              /></a>
+            </div>
+            <div class="descripcion">
+              <p><%=product.product_name%></p>
+            </div>
+            <div class="precio">
+              <p><%=product.price%></p>
+            </div>
+            <div class="boton-productos">
+              <input type="button" value="SUMAR AL CARRITO" />
+            </div>
+          </div>
+          <%}) %>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer-->
+    <%- include("../partials/footer.ejs") %>
+    <!-- fin footer-->
+    <script src="/layout/views/animacion.js"></script>
+  </body>
+</html>

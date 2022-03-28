@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD-->
+<%- include("../partials/head.ejs") %> 
+<!-- FIN HEAD-->
+
+
+<body>
+
+
+    <!-- HEADER + NAVBAR + LOGO -->
+    <%- include("../partials/header.ejs") %> 
+    <!-- FIN  HEADER + NAVBAR + LOGO -->
+
+
+
+    <!-- MAIN (SLIDER, PRODUCTOS DESTACADOS, MAPS) -->
+    <main>
+
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/slider-assets/slide1.png" class="d-block w-100" alt="Imagen promo 1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/slider-assets/slide2.png" class="d-block w-100" alt="Imagen promo 2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/slider-assets/slide3.png" class="d-block w-100" alt="Imagen promo 3">
+              </div>
+            </div>
+          </div>
+
+        <!-- 
+    <div id="container-slider">
+
+        <ul class="slider">
+            <li id="slide1">
+                <img src="images/slider-assets/slide1.png" alt="slide3">
+            </li>
+            <li id="slide2">
+                <img src="images/slider-assets/slide2.png" alt="slide3">
+            </li>
+            <li id="slide3">
+                <img src="images/slider-assets/slide3.png" alt="slide3">
+            </li>
+        </ul>
+
+        <ul class="menu">
+            <li>
+                <a href="#slide1">1</a>
+            </li>
+            <li>
+                <a href="#slide2">2</a>
+            </li>
+            <li>
+                <a href="#slide3">3</a>
+            </li>
+        </ul>
+
+    </div> -->
+
+    <h1 class="titleD">Productos Destacados</h1>
+    
+<section class="products">
+    
+    <div class="product1-inidex">
+        <a href=""><img class="productimage" src="images/productD-assets/pcCompleta.png" alt="destacado1"></a>
+        <p class="price">100.000$</p>
+    </div>
+</section>
+
+
+
+</main>
+    <!-- FIN MAIN (SLIDER, PRODUCTOS DESTACADOS, MAPS) -->
+
+
+
+
+    <!-- footer-->
+    <%- include("../partials/footer.ejs") %> 
+    <!-- fin footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

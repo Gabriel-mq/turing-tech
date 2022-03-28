@@ -1,0 +1,108 @@
+
+
+.main-restablecer {
+    background-color:var(--rojo-fuego);
+    width: 60vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+    border-radius: 2rem;
+    
+    
+}
+#caja {
+    display: flex-start;
+    margin: auto;
+    background-color: transparent;
+    
+    
+    
+}
+.main__h2- {
+    display: flex;
+    font-size: 4rem;
+    line-height: 2.5rem;
+    margin:3.5rem 0rem ;
+    flex-direction: row;
+    color:var(--blanco-agua);
+}
+.main__h2-form {
+    background-color: transparent;
+}
+.titulo__email {
+    font-size: 3.5rem;
+    line-height: 2.5rem;
+    margin:0.5rem 0rem ;
+    
+    color:var(--blanco-agua);
+    text-align: center;
+}
+
+
+.main__hs-form-input {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    height: 7vh;
+    padding:0 0 0 1rem;
+    margin:0 0 4rem 0;
+    border-radius: 0.3rem;
+    color: var(--blanco-agua);
+    background-color: var(--negro-intenso-transparente);
+    
+}
+
+#main__section-button {
+    border-radius:1.5rem;
+    width:32rem;
+    height: 7rem;
+    font-size: 4rem;
+    margin:2rem 0;
+    background-color: var(--negro-intenso-transparente);
+    color: var(--blanco-agua);
+}
+#main__section-button:hover {
+    cursor: pointer;
+    color:var(--violeta-fuego);
+}
+
+
+
+
+/*móvil*/
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    
+    .main-restablecer{
+        width: 85vw;
+        height: 55vh;
+    }
+    .main__h2-{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .main__hs-form-input{
+        width: 100%;
+        font-size: 1.5rem;
+        height: 3.5rem;
+        padding: 0.5rem;
+        margin: 1.5rem 0;
+    }
+    .main__hs-form-input::placeholder{
+        font-size: 1.5rem;
+        
+    }
+    #main__section-button {
+        font-size: 2rem;
+        
+        width: 18rem;
+        height: 4rem;
+   
+        margin:2rem 0;
+    }
+    .titulo__email{
+        font-size: 2rem;
+    }
+}

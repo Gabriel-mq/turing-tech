@@ -1,0 +1,107 @@
+.contenedorCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-compras1,
+.contenedor-compras2,
+.contenedor-compras3 {
+  background-color: var(--rojo-fuego);
+  width: 500px;
+  height: 140px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid var(--negro-intenso);
+  border-radius: 5px;
+}
+
+.ingreso {
+  width: 2rem;
+  margin: 2rem;
+}
+.contenedor-envios {
+  background-color: var(--rojo-fuego);
+  margin-top: 15px;
+  width: 500px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border: 1px solid var(--negro-intenso);
+}
+
+#imagen-descuento {
+  width: 3rem;
+  height: 3rem;
+}
+
+.promociones {
+  background-color: var(--rojo-fuego);
+  margin-top: 15px;
+  width: 500px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border: 1px solid var(--negro-intenso);
+}
+
+.promocion {
+  width: 40rem;
+  height: 3rem;
+}
+
+.promociones button {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 6rem;
+  padding: 0.5rem;
+  border: 1px solid var(--negro-intenso);
+}
+
+.contenedor-pagos {
+  background-color: var(--rojo-fuego);
+  margin-top: 15px;
+  width: 500px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: 1px solid var(--negro-intenso);
+}
+
+.boton {
+  width: 3rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trush {
+  height: 3rem;
+}
+
+.boton .cart-p {
+  color: #0e0b16;
+}
+.cart-p {
+  color: var(--negro-intenso);
+}
+
+.envio {
+  background-color: #a239ca;
+  margin-top: 15px;
+  width: 500px;
+  height: 140px;
+}

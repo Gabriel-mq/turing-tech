@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("../partials/head.ejs") %>
+
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+      <main class="contenedorCart">
+        <section class="main__container">
+          <div class="contenedor-compras1">
+            <img class="imagen-procesador" src="images/productCart-assets/imagen.png">
+            <p class="cart-p">Procesador AMD Ryzen 5 1600 AF Zen+ 12nm AM4 Wraith Stealth Cooler </p>
+            <input class="ingreso"> </input>
+            <p class="cart-p">20.500</p>
+            <button class="boton"> <img class="trush" src="images/productCart-assets/trush.svg"></i></button>
+
+          </div>
+
+          <div class="contenedor-compras2">
+            <img class="imagen-procesador" src="images/productCart-assets/core.png">
+            <p class="cart-p">Procesador Intel Core i7 9700F 4.7GHz Turbo 1151 Coffee Lake </p>
+            <input class="ingreso"> </input>
+            <p class="cart-p">34.800</p> <button class="boton"><img class="trush"
+                src="images/productCart-assets/trush.svg"> </button>
+
+          </div>
+
+          <div class="contenedor-compras3">
+            <img class="imagen-procesador" src="images/productCart-assets/ryzen.png">
+            <p class="cart-p">Procesador AMD RYZEN 7 3700X 4.4 GHz AM4 Wraith Prism RGB Led Cooler
+            </p>
+            <input class="ingreso"> </input>
+            <p>20.500</p>
+            <button class="boton"> <img class="trush" src="images/productCart-assets/trush.svg"><button>
+
+          </div>
+
+          <div class="contenedor-envios">
+            <div class="oca">
+              <label for="">Correo Oca: </label>
+              <input type="radio" name="precio" value="a"> Domicilio
+              <input type="radio" name="precio" value="a"> Sucursal
+            </div>
+
+            <div class="andreani">
+              <label for="">Correo Andreani: </label>
+              <input type="radio" name="precio" value="a"> Domicilio
+              <input type="radio" name="precio" value="a"> Sucursal
+            </div>
+
+            <div class="mensajeria">
+              <label for="">Mensajería: </label>
+              <input type="radio" name="precio" value="a"> Domicilio
+            </div>
+
+            <div class="codigo-postal">
+              <p class="cart-p"> Código postal: </p>
+              <input class="direccion" type="text" name="ingreso" id="ingreso" placeholder="Ingrese código postal" />
+            </div>
+          </div>
+
+          <div class="promociones">
+            <input class="promocion" type="text" name="ingreso" id="ingreso" placeholder="Ingresar código de descuento">
+            <img src="images/productCart-assets/descuento.png" id="imagen-descuento">
+
+            <button> ACEPTAR </button>
+          </div>
+
+          <div class="contenedor-pagos">
+            <div class="pago-contado">
+              <label for="">Pago contado: </label>
+              <input type="radio" name="precio" value="a"> Deposito
+              <input type="radio" name="precio" value="a"> Transferencia
+            </div>
+
+            <div class="pago-en-cuotas">
+              <label for="">Pago en cuotas: </label>
+              <input type="radio" name="precio" value="a"> Tarjetas
+              <input type="radio" name="precio" value="a"> Mercado Pago
+            </div>
+
+            <div class="total">
+              <p class="cart-p"> Total: $120.477</p>
+            </div>
+          </div>
+
+          </form>
+        </section>
+      </main>
+
+      <%- include("../partials/footer.ejs") %>
+
+  </body>
+
+</html>

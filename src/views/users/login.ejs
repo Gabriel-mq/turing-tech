@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include("../partials/head.ejs") %>
+
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+
+      <main class="contenedorlogin">
+        <section class="main__container">
+          <div class="contenedor-facebook-google">
+            <h1 style="color:#D7E1F7;font-size: 2.5rem;margin:2rem;">INGRESA CON UNA CUENTA</h1>
+            <form action="/login" method="POST">
+              <button class="main__container-facebook" type="submit">
+                <img class="imagen-facebook" src="images/formulario-assets/facebook.png">
+                <p class="letra-facebook"> Ingrese con Facebook </p>
+              </button>
+              <button class="main__container-google" type="submit">
+                <img class="imagen-google" src="images/formulario-assets/google.png">
+                <p class="letra-google"> Ingrese con Google </p>
+              </button>
+            </form>
+          </div>
+
+          <div class="contenedor-sesion">
+            <h1 style="color:#D7E1F7;font-size: 2.5rem;margin:1rem;">INICIAR SESIÓN</h1>
+            <form class="form-sesion" action="/login" method="POST" id="formulario-login">
+              <div class="errorLogin"><%= locals.errorLogin ? locals.errorLogin : "" %></div>
+              <div class="main__container-name-nombre <%= locals.errors && errors.userEmail ? "emailLogin" : null %>">
+                <input type="text" name="userEmail" id="userMail" placeholder="Email"/>
+                <p class="parrafo_error" id="p_error1">Correo electrónico incorrecto</p>
+              </div>
+              <div class="main__container-name-nombre <%= locals.errors && errors.userLock ? "contraseniaLogin" : null %>">
+                <input type="password" name="userLock" id="userPass" placeholder="Contraseña"/>
+                <p class="parrafo_error" id="p_error2" >Contraseña incorrecta</p>                
+              </div>
+              <div class="main__container-remember">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember" class="remember__text">Recordar contraseña</label>
+              </div>
+              <button type="submit" class="boton-iniciar">Iniciar</button>
+            </form>
+          </div>
+          <a href="./restablecer"><button class="button-contraseña"> ¿Has olvidado tu contraseña?</button></a>
+          <a href="./register" class="registrate"><button class="button-registrate">Registrate</button> </a>
+        </section>
+      </main>
+
+      <%- include("../partials/footer.ejs") %>
+
+
+      <script src="js/loginValidation.js"> </script>
+  </body>
+
+</html>

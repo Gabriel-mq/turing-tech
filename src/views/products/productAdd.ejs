@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- HEAD-->
+  <%- include("../partials/head.ejs") %>
+  <!-- FIN HEAD-->
+
+  <body>
+    <!-- HEADER + NAVBAR + LOGO -->
+    <%- include("../partials/header.ejs") %>
+    <!-- FIN  HEADER + NAVBAR + LOGO -->
+
+    <!-- MAIN (SLIDER, PRODUCTOS DESTACADOS, MAPS) -->
+    <main class="main-addProduct">
+      <section class="main-addProduct-container">
+        <h2 class="main__title-addProduct">Ingrese los nuevos productos</h2>
+
+        <form
+          action="/productAdd/create" enctype="multipart/form-data" method="POST"
+          id="formulario"
+        >
+          <div class="main__container-rol <%= locals.errors && errors.productCategory ? "productCategory" : null %>">
+            <p>Categoria</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/registro-assets/id.svg"
+                alt="rol-registro"
+                id="main__register-rol"
+              />
+            </div>
+            <div class="main__register">
+              <select name="productCategory" id="productCategory">
+                <% for(let i = 0; i < categories.length;i++){ %>
+                <option value="<%= categories[i].id %>">
+                    <%= categories[i].categorie_name %> 
+                </option>
+                <% } %> 
+              </select>
+            </div>
+          </div>
+
+          <div class="main__container-rol <%= locals.errors && errors.productBrand ? "productBrand" : null %>">
+            <p>Marcas</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/registro-assets/id.svg"
+                alt="rol-registro"
+                id="main__register-rol"
+              />
+            </div>
+            <div class="main__register">
+              <select name="productBrand" id="productBrand">
+                <% for(let i = 0; i < brands.length;i++){ %>
+                <option value="<%= brands[i].id %>">
+                    <%= brands[i].brand_name %> 
+                </option>
+                <% } %> 
+              </select>
+            </div>
+          </div>
+          <!--Grupo: Nombre-->
+          <div class="main__container-name <%= locals.errors && errors.productName ? "productName" : null %>" id="grupo__nombre">
+            <p>Nombre</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/registro-assets/name.svg"
+                alt="nombre-registro"
+                id="main__-name"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="text"
+                name="productName"
+                id="productName"
+                placeholder="Nombre del producto"
+                class="main__register-name"
+                value="<%= locals.old && old.productName ? old.productName : "" %>"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+            <p class="formulario__input-error"> El nombre tiene que tener al menos 4 caracteres y un maximo de 16 caracteres</p>
+          </div>
+          <!--Grupo: Descripcion-->
+          <div class="main__container-user <%= locals.errors && errors.productDescription ? "productDescription" : null %>" id= "grupo__descripcion">
+            <p>Descripción</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/registro-assets/name.svg"
+                alt="descripción"
+                id="main__register-user"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="text"
+                name="productDescription"
+                id="productDescription"
+                placeholder="Descripción del producto"
+                class="main__register-user"
+                value="<%= locals.old && old.productDescription ? old.productDescription : "" %>"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+            <p class="formulario__input-error"> La descripción tiene que tener al menos 5 caracteres y un maximo de 20 caracteres </p>
+          </div>
+
+          <!--Grupo: Descripcion ampliada-->
+          <div class="main__container-user <%= locals.errors && errors.productDescription ? "productDescription" : null %>" id= "grupo__descripcionLong">
+            <p>Descripción ampliada</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/registro-assets/name.svg"
+                alt="usuario-registro"
+                id="main__register-user"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="text"
+                name="productDescriptionLong"
+                id="productDescriptionLong"
+                placeholder="Descripción ampliada del producto"
+                class="main__register-user"
+                value="<%= locals.old && old.productDescriptionLong ? old.productDescriptionLong : "" %>"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+            <p class="formulario__input-error"> La descripción tiene que tener al menos 10 caracteres y un maximo de 40 caracteres </p>
+          </div>
+
+          <!--Grupo: Precio-->
+          <div class="main__container-email <%= locals.errors && errors.productPrice ? "productPrice" : null %>" id="grupo__precio">
+            <p>Precio</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/money-bill-solid.svg"
+                alt="email-registro"
+                id="main__register-email"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="number"
+                name="productPrice"
+                id="productPrice"
+                placeholder="Precio"
+                class="main__register-email"
+                value="<%= locals.old && old.productPrice ? old.productPrice : "" %>"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+            <p class="formulario__input-error"> Debe tener al menos 2 numeros. No puede tener letras ni simbolos. </p>
+          </div>
+          <!--Grupo: Stock-->
+          <div class="main__container-lock <%= locals.errors && errors.productStock ? "productStock" : null %>" id="grupo__productStock">
+            <p>Stock</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/stack-overflow-brands.svg"
+                alt="contraseña-registro"
+                id="main__register-lock"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="text"
+                name="productStock"
+                id="productStock"
+                placeholder="Stock"
+                class="main__register-lock"
+                value="<%= locals.old && old.productStock ? old.productStock : "" %>"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+            <p class="formulario__input-error"> Debe tener al menos 1 numero. No puede tener letras ni simbolos. </p>
+          </div>
+          <!--Grupo: Cuotas-->
+          <div class="main__container-lock <%= locals.errors && errors.productFees ? "productFees" : null %>" id="grupo__productFees">
+            <p>Cuotas</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/stack-overflow-brands.svg"
+                alt="contraseña-registro"
+                id="main__register-fees"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="text"
+                name="productFees"
+                id="productFees"
+                placeholder="Cuotas"
+                class="main__register-lock"
+                value="<%= locals.old && old.productFees ? old.productFees : "" %>"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+            <p class="formulario__input-error"> Debe colocar el numero de cuotas. No puede tener letras ni simbolos. </p>
+          </div>
+          <!--Grupo: Descuento-->
+          <div class="main__container-lock <%= locals.errors && errors.productDiscount ? "productDiscount" : null %>">
+            <p>Descuento</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/stack-overflow-brands.svg"
+                alt="contraseña-registro"
+                id="main__register-discount"
+              />
+            </div>
+            <div class="main__register">
+              <select name="productDiscount" id="productDiscount">
+                <% for(let i = 0; i < discounts.length;i++){ %>
+                <option value="<%= discounts[i].id %>">
+                    <%= discounts[i].discount %> 
+                </option>
+                <% } %> 
+              </select>
+            </div>
+          </div>
+          <!--Grupo: Imagen-->
+          <div class="main__container-avatar <%= locals.errors && errors.imageProduct ? "imageProduct" : null %>">
+            <p>Imágen de producto</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/file-image-solid.svg"
+                alt="avatar-registro"
+                id="main__register-avatar"
+              />
+            </div>
+            <div class="main__register">
+              <input
+                type="file"
+                name="imageProduct"
+                id="imageProduct"
+                placeholder="Foto producto"
+                class="main__register-avatar"
+                oninvalid="this.setCustomValidity(' ')"
+              />
+            </div>
+          </div>
+
+                <!--Grupo: Visibilidad-->
+          <div class="main__container-rol <%= locals.errors && errors.productVisibility ? "productVisibility" : null %>">
+            <p>Visibilidad</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/eye-slash-regular.svg"
+                alt="rol-registro"
+                id="main__register-rol"
+              />
+            </div>
+            <div class="main__register">
+              <select name="productVisibility" id="productVisibility">
+                <option value="activo" selected>Activo</option>
+                <option value="inactivo">Inactivo</option>
+              </select>
+            </div>
+          </div>
+          <!--Grupo: Destacado en Home-->
+          <div class="main__container-rol <%= locals.errors && errors.productImportant ? "productImportant" : null %>">
+            <p>Destacado en Home</p>
+            <div class="main__bluebox">
+              <img
+                src="/images/productAdd-assets/star-regular.svg"
+                alt="rol-registro"
+                id="main__register-rol"
+              />
+            </div>
+            <div class="main__register">
+              <select name="productImportant" id="productImportant">
+                <option value="destacado-si" selected>Si</option>
+                <option value="destacado-no">No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p> <i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+          </div>
+
+          
+          <button type="submit" id="create-submit">Agregar</button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"> ¡Se agrego el producto con exito!</p>
+        
+
+        </form>
+      </section>
+    </main>
+    <!-- FIN MAIN (SLIDER, PRODUCTOS DESTACADOS, MAPS) -->
+
+    <!-- footer-->
+    <%- include("../partials/footer.ejs") %>
+    <!-- fin footer-->
+
+    <script src="js/productAddValidation.js"> </script>
+  </body>
+</html>

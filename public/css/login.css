@@ -1,0 +1,238 @@
+.contenedorlogin {
+  padding: 5rem;
+}
+
+.main__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.contenedor-sesion {
+  background-color: var(--rojo-fuego);
+  height: 100%;
+  width: 500px;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.contenedor-facebook-google {
+  background-color: var(--rojo-fuego);
+  height: 200px;
+  width: 500px;
+  margin-bottom: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.main__container-google {
+  margin-top: 10px;
+  border: 1px solid var(--negro-intenso);
+  background-color: var(--blanco-agua);
+  border-radius: 0.3rem;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main__container-facebook {
+  background-color: var(--blanco-agua);
+  border: 1px solid var(--negro-intenso);
+  border-radius: 0.3rem;
+  width: 300px;
+  cursor: pointer;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main__container-name-nombre input {
+  background-color: var(--blanco-agua);
+  margin-top: 10px;
+  /*border: 1px solid var(--negro-intenso);*/
+  width: 300px;
+  height: 35px;
+  font-size: 2.5rem;
+}
+
+.imagen-facebook {
+  width: 27px;
+}
+
+.imagen-google {
+  width: 27px;
+}
+
+.letra-facebook {
+  font-size: 2.5rem;
+  color: var(--negro-intenso);
+  align-self: baseline;
+}
+
+.letra-google {
+  font-size: 2.5rem;
+  color: var(--negro-intenso);
+  align-self: baseline;
+}
+.form-sesion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#remember{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.remember__text{
+  font-size: 2rem;
+  color:var(--blanco-agua);
+  margin-left:1rem;
+}
+
+.main__container-remember{
+  display: flex;
+  margin-top:1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.boton-iniciar {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  margin: 2rem;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  align-self: center;
+  font-size: 2.5rem;
+}
+
+.boton-iniciar:hover {
+  color: var(--blanco-agua);
+  text-shadow: 0 0 4px var(--violeta-fuego), 0 0 8px var(--violeta-fuego);
+  cursor: pointer;
+}
+.button-contraseña {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  font-size: 2.5rem;
+}
+
+.button-contraseña:hover {
+  color: var(--blanco-agua);
+  text-shadow: 0 0 4px var(--violeta-fuego), 0 0 8px var(--violeta-fuego);
+  cursor: pointer;
+}
+
+.button-registrate {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  font-size: 2.5rem;
+}
+.button-registrate:hover {
+  color: var(--blanco-agua);
+  text-shadow: 0 0 4px var(--violeta-fuego), 0 0 8px var(--violeta-fuego);
+  cursor: pointer;
+}
+
+.parrafo_error{
+  display: none;
+  font-size: 12px;
+  margin: 5px;
+  font-weight: 800;
+  text-align: center;
+}
+.error_activo{
+  display: block;
+}
+
+.borde_correcto_activo{
+  border: 2px solid green ;
+}
+
+.borde_incorrecto_activo{
+  border: 2px solid red ;
+}
+
+
+
+
+.recordar-usuario{
+  background-color: rgba(0, 0, 0, 0.445);
+  color: var(--blanco-agua);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--negro-intenso);
+  font-size: 2.5rem;
+  
+}
+.chekcbox{
+  color: white;
+  font-size: 2.5rem;
+
+}
+
+#recordar-usuario{
+  font-size: 2.5rem;
+}
+
+.emailLogin::after,.contraseniaLogin::after{
+  width: 100%;
+  display: block;
+  margin: 1rem 0 0 0;
+  font-size: calc(0.1rem + 1vw);
+  color:var(--blanco-agua);
+}
+
+.emailLogin::after{
+  content: "El email ingresado no es válido, esta vacío o no existe en nuestra base de datos";
+}
+
+.contraseniaLogin::after{
+  content: "La contraseña ingresada no es válida, esta vacía o no existe en nuestra base de datos";
+}
+
+.errorLogin{
+  width: 100%;
+  display: block;
+  margin: 1rem 0 0 0;
+  font-size: calc(0.1rem + 1vw);
+  color:var(--blanco-agua);
+}
+
+/*Tablet - netbook*/
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+  /*MAIN*/
+}
+
+/*móvil*/
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+}

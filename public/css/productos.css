@@ -1,0 +1,227 @@
+.containerproductos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    background-color: var(--rojo-fuego);
+    width: 80%;
+    border-radius: 5%;
+    border: 1px solid var(--negro-intenso);
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem;
+    
+}
+
+.destacados{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+
+
+#createProduct-submit{
+    background-color: var(--negro-intenso-transparente);
+    border:2px solid var(--negro-intenso);
+    border-radius: 5px;
+    
+    height: 3rem;
+    font-size: 1rem;
+    margin:1rem auto;
+    color:var(--blanco-agua);
+  }
+  
+  #createProduct-submit:hover{
+    cursor: pointer;
+    color:var(--violeta-fuego);
+  }
+
+.cont-menu{
+    width: 20%;
+    margin: 50px ;
+    
+}
+
+.cont-menu .cont-enlace{
+    box-shadow: 0px 0px 2px 1px var(--violeta-fuego);  
+}
+
+.cont-menu .cont-enlace .enlace{
+    height: 0;
+    overflow: hidden;
+}
+
+.cont-menu .cont-enlace .animation{
+    height: 100%;
+}
+
+.cont-menu .cont-enlace .opcion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.445);
+    color: var(--marfil-agua);
+    padding: 1.3rem 1rem;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--negro-intenso);
+}
+
+.opcion > p{
+    width: 100%;
+    margin-right:0.5rem;
+}
+
+.cont-menu .cont-enlace .opcion p{
+    font-size: 1.5rem;
+}
+
+.cont-menu .cont-enlace .opcion .icono{
+    background-color: var(--rojo-fuego);
+    color: var(--violeta-fuego);
+    font-weight: bold;
+    font-size: 2.2rem;
+    height: 2.8rem;
+    text-align: center;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.cont-menu .cont-enlace .enlace a{
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.cont-menu .cont-enlace .enlace a:hover{
+    background-color: var(--azul-viento);
+    color: var(--blanco-agua);
+}
+
+.orden-productos{
+    margin: 0px 40px 0 0;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.orden select{
+    height: 100px;
+    width: 100px;
+}
+
+
+.destacadosorden{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.product1, .product2, .product3, .product4, .product5{
+    height: 15rem;
+    width: 60rem;
+    background-color: transparent;
+    margin: 50px;
+    border-radius: 10px;
+    border: 3px solid var(--negro-intenso);
+    background-color: rgba(0, 0, 0, 0.445);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.descripcion p{
+    font-size: 1.5rem;
+    color: var(--marfil-agua);
+}
+
+.precio p{
+    font-size: 2rem;
+    color: var(--marfil-agua);
+}
+
+.boton-productos input{
+    border-radius: 5px;
+    height: 3.5rem;
+    width: 15rem;
+    margin: 1rem;
+    color: var(--blanco-agua);
+    background-color: var(--rojo-fuego);
+    border: 1px solid var(--negro-intenso);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-productos input:hover{
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 13rem;
+    margin: 1rem;
+
+}
+
+.boton-productos input{
+    transition: color 0.2s linear 0.2s;
+    transition: height 0.2s linear 0.2s;
+    transition: width 0.2s linear 0.2s;
+    
+}
+
+.imagen img{
+    width: 10rem;
+    height: 10rem;
+}
+
+/*Tablet - netbook*/
+
+@media screen and (min-width:768px) and (max-width:1150px){
+.product1, .product2, .product3, .product4, .product5{
+    height: 200px;
+    width: 40rem;
+}
+}
+
+/*móvil*/
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    #container-slider > ul.slider{
+        width: 100%;
+        height: 9rem;
+    }
+
+    .cont-menu{
+        display: none;
+    }
+
+    .destacados{
+        width: 85%;
+        display: flex;
+        align-items: center;
+    }
+
+    .product1, .product2, .product3, .product4, .product5{
+        height: 190px;
+        display: flex;
+        width: 20rem;
+        flex-direction: column;
+    }
+
+    .imagen img{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .boton{
+        display: none;
+    }
+
+    .precio p{
+        font-size: 1rem;
+        color: var(--marfil-agua);
+    }
+}

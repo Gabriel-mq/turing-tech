@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include("../partials/head.ejs") %>
+  </head>
+  <body>
+    <main>
+      <%- include("../partials/header.ejs") %>
+
+
+        <div class="contenedorPadreEdit">
+        
+
+        <div class="main__container-avatarss">
+            
+           
+            <div class="main__editProfile">
+            <input
+                type="file"
+                name="productImage1"
+                id="productImage1"
+                placeholder="Foto producto"
+                class="main__register-avatar"
+                oninvalid="this.setCustomValidity(' ')"
+            />
+            </div>
+        </div>
+        <div id="main-datos-2">
+        <div class="containerDatosPersonales2">
+            <form action="#" method="POST">
+            <h2 class="h2">Datos Personales</h2>
+
+            <label class="label-datosPersonales2" for="ID">*ID cliente:</label>
+            <input class="input-datosPersonales2" type="text" placeholder="ID cliente" id="ID" />
+
+            <label class="label-datosPersonales2" for="correo">*Correo Electronico:</label>
+            <input class="input-datosPersonales2" type="email" placeholder="email" id="correo" />
+
+            <label class="label-datosPersonales2" for="name">*Nombre y Apellido:</label>
+            <input class="input-datosPersonales2" type="text" placeholder="Nombre y Apellido" id="name" />
+
+            <label class="label-datosPersonales2" for="dni">*DNI:</label>
+            <input class="input-datosPersonales2" type="number" placeholder="DNI" id="dni" maxlength="8" />
+
+            <label class="label-datosPersonales2" for="codigo">*Telefono:</label>
+            <input class="input-datosPersonales2" type="text" placeholder="C. Area" id="codigo" />
+
+          </form>
+        </div>
+
+        <div class="containerFacturacion2">
+        <form action="#" method="POST">
+            <h2 class="h2f">Domicilio de facturación</h2>
+            <label class="label-direccionFiscal2" for="direccion">*Direccion fiscal:</label>
+            <input class="input-fiscal2"  type="text" placeholder="Dirección" id="direccion" />
+
+            <label class="label-direccionFiscal2" for="piso">*Piso/Depto:</label>
+            <input class="input-fiscal2" type="text" placeholder="Piso/Depto" id="piso" />
+
+            <label class="label-direccionFiscal2" for="CP">*Código Postal:</label>
+            <input class="input-fiscal2" type="text" placeholder="Codigo Postal" id="CP" />
+
+            <label class="label-direccionFiscal2" for="localidad">*Localidad:</label>
+            <input class="input-fiscal2" type="text" placeholder="Localidad" id="localidad" />
+
+            <label class="label-direccionFiscal2" for="provincia">*Provincia:</label>
+            <input class="input-fiscal2" type="text" placeholder="Provincia" id="provincia" />
+        </form>
+        </div>
+
+        <!--<div class="containerCondicionFiscal">
+            <form action="#" method="POST">
+            <h2>Condición Fiscal</h2>
+            <div class="radio">
+                <label id="factura" for="tipo-de-factura">Selecione el tipo de factura deseada</label>
+                <input type="radio" name="factura" value="consumidorFinal" > Consumidor Final
+                <input type="radio" name="factura" value="responsableInscripto">Responsable Inscripto
+                <input type="radio" name="factura" value="responsableNoInscripto">Responsable No Inscripto
+                <input type="radio" name="factura" value="monotributista">Monotributista
+                <input type="radio" name="factura" value="exento">Exento
+            </div>
+            <label class="label-condicionFiscal" for="DNI">*DNI:</label>
+            <input class="input-condicionFiscal" type="text" placeholder="DNI" id="DNI" maxlength="8" />
+
+            <label class="label-condicionFiscal" for="name">*Nombre y Apellido:</label>
+            <input class="input-condicionFiscal" type="text" placeholder="Nombre y Apellido" id="name" />
+            </form>-->
+        </div>
+        <button class="boton-editProfile">Guardar Datos</button>
+          
+        </div>
+    
+    
+      </div>
+
+     
+      <%-include("../partials/footer.ejs") %>
+    </main>
+  </body>
+</html>

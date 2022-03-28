@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("../partials/head.ejs") %> 
+
+    
+    <body>
+    <%- include("../partials/header.ejs") %> 
+
+    <main class="main__restablecer">
+        <section class="main-restablecer">
+            <h2 class="main__h2-">Restablecer contraseña</h2>
+            <div id="caja">
+                <form action="#" method="POST" class="main__h2-form">
+                    <input type="email" name="email" id="Email" placeholder="Email" 
+                        class="main__hs-form-input">
+                    <input type="codigo" name="codigo-restablecer" id="codigo" placeholder="Código"
+                        class="main__hs-form-input">
+                    <input type="password" name="password-restablecer" id="password" placeholder="Nueva contraseña"
+                        class="main__hs-form-input">
+                    <input type="password" name="repit-password-restablecer" id="repit-password"
+                        placeholder="Repita la nueva contraseña" class="main__hs-form-input">
+
+                </form>
+            </div>
+            <button type="submit" id="main__section-button">Restablecer</button>
+
+        </section>
+    </main>
+
+
+    <%- include("../partials/footer.ejs") %> 
+
+</body>
+
+</html>

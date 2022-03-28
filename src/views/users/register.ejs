@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include("../partials/head.ejs") %> 
+
+    
+    <body>
+    <%- include("../partials/header.ejs") %> 
+
+
+    <main class="main-registerUsers">
+
+        <section class="main__register-container">
+
+            <h2 class="main__title">Por favor, ingrese sus respectivos datos para validarlo en el sistema</h2>
+
+            <form action="/register" method="post" enctype="multipart/form-data" id="formulario">
+                <div class="main__container-name id="idName" <%= locals.errors && errors.registroFullname ? "nombre" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/name.svg" alt="nombre-registro"
+                            id="main__register-name"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroFullname" id="registroNombre" placeholder="Nombre y apellido"
+                            class="main__register-name" value="<%= locals.old && old.registroFullname ? old.registroFullname : "" %>" oninvalid="this.setCustomValidity(' ')">
+                        
+                    </div>
+                    <p class="parrafo_error" id="p_error1" > Campo obligatorio. Debe tener al menos 2 caracteres.</p>
+                </div>
+                <div class="main__container-user <%= locals.errors && errors.registroUsuario ? "usuario" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/user.svg" alt="usuario-registro"
+                            id="main__register-user"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroUsuario" id="registroUsuario" placeholder="Usuario"
+                            class="main__register-user" value="<%= locals.old && old.registroUsuario ? old.registroUsuario : "" %>" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error2" > Su nombre de usuario solamente puede contener caracteres alfanuméricos. Ni contener el campo vacío, con una longitud máxima de 20 caracteres</p>
+                </div>
+                <div class="main__container-email <%= locals.errors && errors.registroEmail ? "email" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/email.svg" alt="email-registro"
+                            id="main__register-email"></div>
+                    <div class="main__register">
+                        <input type="email" name="registroEmail" id="registroEmail" placeholder="Email"
+                            class="main__register-email" value="<%= locals.old && old.registroEmail ? old.registroEmail : "" %>"   oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error3" > Su email solamente puede contener caracteres alfanuméricos, guiones medio, guiones bajos y un @ como intermediario. Ni contener el campo vacío</p>
+                </div>
+                <div class="main__container-email <%= locals.errors && errors.registroDni ? "dni" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/dni.svg" alt="dni-registro"
+                            id="main__register-dni"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroDni" id="registroDni" placeholder="DNI"
+                            class="main__register-dni" value="<%= locals.old && old.registroDni ? old.registroDni : "" %>"   oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error4"> Su DNI debe contener obligatoriamente una longitud de 8 números y sin ningún otro tipo de caracter</p>
+                </div>
+                <div class="main__container-tel <%= locals.errors && errors.registroTel ? "tel" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/phone.svg" alt="tel-registro"
+                            id="main__register-tel"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroTel" id="registroTel" placeholder="Teléfono"
+                            class="main__register-tel" value="<%= locals.old && old.registroTel ? old.registroTel : "" %>"   oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error5">Su número de teléfono debe contener una longitud de 10 números, no se aceptan números extranjeros</p>
+                </div>
+                <div class="main__container-dir <%= locals.errors && errors.registroDir ? "dir" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/domicilio.svg" alt="dirección-registro"
+                            id="main__register-dir"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroDir" id="registroDir" placeholder="Dirección fiscal"
+                            class="main__register-dir" value="<%= locals.old && old.registroDir ? old.registroDir : "" %>"   oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error6">Su dirección fiscal debe contener solamente caracteres alfanuméricos</p>
+                </div>
+                <div class="main__container-depto <%= locals.errors && errors.registroDepto ? "depto" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/depto.svg" alt="depto-registro"
+                            id="main__register-depto"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroDepto" id="registroDepto" placeholder="Departamento/Piso"
+                            class="main__register-depto" value="<%= locals.old && old.registroDepto ? old.registroDepto : "" %>"   oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error7">Su departamento/piso debe contener solamente caracteres alfanuméricos</p>
+                </div>
+                <div class="main__container-postal <%= locals.errors && errors.registroPostal ? "postal" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/postal.svg" alt="código-postal-registro"
+                            id="main__register-postal"></div>
+                    <div class="main__register">
+                        <input type="text" name="registroPostal" id="registroPostal" placeholder="Código Postal"
+                            class="main__register-postal" value="<%= locals.old && old.registroPostal ? old.registroPostal : "" %>"   oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error8"> Su código postal debe contener solamente caracteres alfanuméricos</p>
+                </div>
+                <div class="main__container-locality <%= locals.errors && errors.registroLocality ? "locality" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/locality.svg" alt="localidad-registro"
+                            id="main__register-locality"></div>
+                    <div class="main__register">
+                        <select name="registroLocality" id="registroLocality" class="main__register-locality">
+                            <% for(let i = 0; i < localities.length;i++) {%> 
+                                <option value="<%= localities[i].id %>"><%= localities[i].locality %></option>
+                            <% } %> 
+                        </select>
+                    </div>
+                </div>
+                <div class="main__container-province <%= locals.errors && errors.registroProvince ? "province" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/province.svg" alt="province-registro"
+                            id="main__register-province"></div>
+                    <div class="main__register">
+                        <select name="registroProvince" id="registroProvince" class="main__register-province">
+                            <% for(let i = 0; i < provinces.length;i++) {%> 
+                                <option value="<%= provinces[i].id %>"><%= provinces[i].province %></option>
+                            <% } %> 
+                        </select>
+                    </div>
+                </div>
+                <div class="main__container-lock <%= locals.errors && errors.registroLock ? "contrasenia" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/unlock.svg" alt="contraseña-registro"
+                            id="main__register-lock"></div>
+                    <div class="main__register">
+                        <input type="password" name="registroLock" id="registroLock" placeholder="Contraseña"
+                            class="main__register-lock" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error9"> Su contraseña obligatoriamente no puede estar vacía y debe tener una longitud mínima de 8 caractéres.</p>
+                </div>
+                <div class="main__container-lockRepeat <%= locals.errors && errors.registroLockRepeat ? "contraseniarepeat" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/lock.svg"
+                            alt="repetir-contraseña-registro" id="main__register-lockRepeat"></div>
+                    <div class="main__register">
+                        <input type="password" name="registroLockRepeat" id="registroLockRepeat"
+                            placeholder="Repetir Contraseña" class="main__register-lockRepeat"
+                            oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    <p class="parrafo_error" id="p_error10">La contraseña de confirmación ingresada no coincide o es inexistente.</p>
+                </div>
+                <div class="main__container-avatar <%= locals.errors && errors.registroAvatar ? "registroavatar" : null %>">
+                    <div class="main__bluebox"><img src="images/registro-assets/avatar.svg" alt="avatar-registro"
+                            id="main__register-avatar"></div>
+                    <div class="main__register">
+                        <input type="file" name="registroAvatar" id="registroAvatar" placeholder="Avatar"
+                            class="main__register-avatar" oninvalid="this.setCustomValidity(' ')">
+                    </div>
+                    
+                </div>
+                 <div class="main__container-rol">
+                    <div class="main__bluebox"><img src="images/registro-assets/id.svg" alt="rol-registro"
+                            id="main__register-rol"></div>
+                    <div class="main__register">
+                        <select name="registroRol" id="registroRol">
+                            <% for(let i = 0; i < roles.length;i++) {%> 
+                                <option value="<%= roles[i].id %>"><%= roles[i].rol_name %></option>
+                            <% } %> 
+                        </select>
+                    </div>
+                </div> 
+
+                <button type="submit" id="main__register-submit">Registrarse</button>
+
+            </form>
+        </section>
+    </main>
+
+    <%- include("../partials/footer.ejs") %> 
+
+    <script src="js/userRegisterValidation.js"></script>
+
+</body>
+
+</html>

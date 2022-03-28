@@ -1,0 +1,128 @@
+.main-ayuda {
+    background-color: var(--rojo-fuego);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:8rem;
+    border:3px solid var(--negro-intenso);
+    width: 80%;
+    margin: auto;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 1rem;
+}
+.main__h2-ayuda {
+    display:block;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 0.5;
+    padding:1rem 1rem;
+    border-bottom: var(--negro-intenso);
+    color:var(--blanco-agua);
+}
+.main__h2-div {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.parrafo {
+    display: flex;
+    
+}
+hr {
+    width: 100%;
+    background-color:var(--azul-viento);
+}
+.titulo-h4 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    font-weight: 900;
+    color:var(--blanco-agua);
+}
+
+.main__h2-div-p {
+    font-size: 2.5rem;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+}
+.main__h2-div-p-span {
+    color: var(--violeta-fuego);
+    margin: 2rem 0 0 0;
+    font-size: 2.5rem;
+    justify-content: flex-start;
+    text-shadow: 0 0 20px var(--negro-intenso);
+    
+    
+}
+.parrafo {
+    font-size: 2.5rem;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.emails {
+    align-items: center;
+    font-size: 6rem;
+    text-align: center;
+    border: none;
+}
+#email {
+    background-color: transparent;
+    color: var(--negro-intenso);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 4rem;
+    font-weight: 900;
+    color:var(--blanco-agua);
+}
+
+
+
+
+/*móvil*/
+    
+@media screen and (min-width:320px) and (max-width:768px) {
+
+    .main-ayuda{
+        padding:2rem;
+    }
+    .main__h2-ayuda {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .main-ayuda {
+        width: 85%;
+        padding: 0.4rem;
+    }
+    .parrafo{
+        font-size: 1.5rem;
+    }
+    .main__h2-div-p-span {
+        font-size: 1.8rem;
+    }
+    .titulo-h4{
+        font-size: 2rem;
+    }
+    #email {
+        font-size: 2rem;
+    }
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,219 @@
+
+.h2 {
+    font-size: 2rem;
+    color: white;
+    margin: 2rem;
+    align-items: center;
+    
+  }
+  
+  #main-datos-2 {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 15rem;
+  
+    padding: 2rem;
+  }
+  .main__container-avatarss {
+    height: 50vh;
+    width: 50%;
+  }
+  .main__register-avatar{
+    font-weight: 400;
+  }
+
+  .contenedorPadreEdit {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 65vh;
+    background-color: var(--rojo-fuego);
+    width: 80%;
+      border-radius: 5%;
+      border: 1px solid var(--negro-intenso);
+      margin: 4rem;
+      box-sizing: border-box;
+      
+      
+      
+      
+  }
+  .containerDatosPersonales2 {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    width: 25rem;
+    margin-right: 5rem;
+    justify-content: flex-end;
+  }
+  .containerFacturacion2 {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    width: 25rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    justify-content: flex-end;
+  }
+  
+  /*.containerCondicionFiscal {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 25rem;
+    justify-content: flex-end;
+  }*/
+  .input-datosPersonales2,
+  .input-fiscal2,
+  .input-condicionFiscal2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .label-datosPersonales2,
+  .label-direccionFiscal2,
+  .label-condicionFiscal2{
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .main__editProfile {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 38rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /*.enviar{
+      width: 3rem;
+      display: flex;
+      flex: end;
+      margin-top: 10rem;
+      flex-direction: row;
+      
+  }*/
+  
+  .boton-editProfile {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.445);
+    color: var(--blanco-agua);
+    margin: 2rem;
+    width: 12rem;
+    height: 8rem;
+    border-radius: 1rem;
+    border: 1px solid var(--negro-intenso);
+    font-size: 2.5rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.8rem;
+  }
+  .boton-editProfile:hover{
+      text-shadow: 0 0 4px var(--violeta-fuego),
+    0 0 8px var(--violeta-fuego);
+  }
+
+  /*móvil*/
+    
+ @media screen and (min-width:320px) and (max-width:768px) {
+
+    .contenedorPadreEdit{
+        display: flex;
+        flex-direction: column;
+        margin: 3rem;
+        height: 100vh;
+        width: 80%;
+        box-sizing: border-box;
+        align-items: flex-start;
+        
+        
+        
+
+        
+
+    }
+
+    .containerDatosPersonales2{
+        display: flex;
+        align-self: center;
+        margin-bottom: 3rem;
+        padding-right: 9rem;
+        position: relative;
+        right: 0.2rem;
+        margin-left: 0rem;
+        
+        
+        
+        
+    }
+    .containerFacturacion2{
+        display: flex;
+        margin-left: 2rem;
+        align-self: center;
+        padding-right: 8rem;
+        position: relative;
+        right: 3.5rem;
+    }
+    #main-datos-2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;   
+        position: relative;  /*  mover las cajas left , right , top , bottom*/
+        left: 1rem;
+        top: 5rem;
+        
+        
+        
+        
+    }
+    .input-datosPersonales2,
+    .input-fiscal2,
+    .input-condicionFiscal2 {
+    font-size: 1.2rem;
+    
+    
+
+    }
+    .label-datosPersonales2,
+    .label-direccionFiscal2,
+    .label-condicionFiscal2{
+    font-size: 1.3rem;
+    
+  }
+  .main__editProfile{
+        height: 10rem;
+        
+        
+
+  }
+  .boton-editProfile{
+        font-size: 1rem;
+        width: 7rem;
+        height: 4rem;
+        display: flex;
+        position: relative;
+        left: 7rem;
+        top: 1.5rem;
+        
+  }
+  .h2{
+        white-space: nowrap;
+        translate:initial;
+        position: relative;
+        right: 2rem;
+        top: 1rem;
+      
+      
+  }
+  .h2f{
+    
+        white-space: nowrap;
+        position: relative;
+        right: 2rem;
+        top: 1rem;
+        
+        
+        
+  }
+}

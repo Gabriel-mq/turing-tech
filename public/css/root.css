@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-size:10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --negro-intenso:#0E0B16;
+    --negro-intenso-transparente:#0e0b16be;
+    --violeta-fuego:#ff70ff;
+    --azul-viento:#4717F6;
+    --blanco-agua:#D7E1F7;
+    --marfil-tierra:#E7DFDD;
+    --marfil-oscuro:#727272b2;
+    --marfil-agua:#EAEAEA;
+    --rojo-fuego:#f6221783;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: url("../images/background-image.jpg") fixed;
+        background-size: 100% 100%;
+}
+
