@@ -209,6 +209,9 @@ const userController = {
       res.redirect('/pageProfile')
     })
   },
+  presentacion: (req, res) => {
+    res.render('users/presentacion')
+  }
 }
 
 module.exports = userController

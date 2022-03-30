@@ -78,4 +78,7 @@ router.put(
   userController.pageProfilePost,
 )
 
+//presentacion
+router.get('/presentacion',userController.presentacion);
+
 module.exports = router

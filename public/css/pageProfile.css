@@ -105,6 +105,10 @@
   .main__pageProfile{
     padding:1rem;
   }
+
+  .image__user{
+    width: 100% !important;
+  }
   
   .data__container{
     display: flex;
